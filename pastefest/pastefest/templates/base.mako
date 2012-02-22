@@ -7,7 +7,10 @@
   <meta name="description" content="pyramid web application" />
 
   <link rel="shortcut icon" href="${request.static_url('pastefest:static/favicon.ico')}" />
+  <link rel="stylesheet" href="${request.static_url('pastefest:static/css/bootstrap.min.css')}" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="${request.static_url('pastefest:static/css/bootstrap.min.responsive')}" media="screen" charset="utf-8" />
   <link rel="stylesheet" href="${request.static_url('pastefest:static/pygments.css')}" media="screen" charset="utf-8" />
+
 </head>
 <body>
 	<div class="topbar">
