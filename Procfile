@@ -1,0 +1,1 @@
+web: ./pastefest/run
