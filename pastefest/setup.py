@@ -14,6 +14,9 @@ requires = [
     'pyramid_debugtoolbar',
     'zope.sqlalchemy',
     'waitress',
+    'PasteScript',
+    'PasteDeploy',
+    'CherryPy',
     ]
 
 setup(name='pastefest',
