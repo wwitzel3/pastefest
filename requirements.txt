@@ -8,10 +8,10 @@ PasteScript==1.7.5
 Pygments==1.4
 SQLAlchemy==0.7.5
 WebOb==1.2b3
+psycopg2==2.4.4
 pyramid==1.3b1
 pyramid-debugtoolbar==0.9.9.1
 pyramid-tm==0.3
-pysqlite==2.6.3
 repoze.lru==0.4
 transaction==1.2.0
 translationstring==1.1
