@@ -8,7 +8,6 @@ PasteScript==1.7.5
 Pygments==1.4
 SQLAlchemy==0.7.5
 WebOb==1.2b3
-pastefest==0.0
 pyramid==1.3b1
 pyramid-debugtoolbar==0.9.9.1
 pyramid-tm==0.3
