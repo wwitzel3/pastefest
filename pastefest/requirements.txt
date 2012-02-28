@@ -1,0 +1,23 @@
+Chameleon==2.7.4
+CherryPy==3.2.2
+Mako==0.6.2
+MarkupSafe==0.15
+Paste==1.7.5.1
+PasteDeploy==1.5.0
+PasteScript==1.7.5
+Pygments==1.4
+SQLAlchemy==0.7.5
+WebOb==1.2b3
+-e git+git@github.com:wwitzel3/pastefest.git@ef175980525a48eee202175af2238a182e7938aa#egg=pastefest-dev
+pyramid==1.3b1
+pyramid-debugtoolbar==0.9.9.1
+pyramid-tm==0.3
+repoze.lru==0.4
+transaction==1.2.0
+translationstring==1.1
+venusian==1.0a3
+waitress==0.8.1
+wsgiref==0.1.2
+zope.deprecation==3.5.0
+zope.interface==3.8.0
+zope.sqlalchemy==0.7
