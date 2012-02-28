@@ -1,3 +1,4 @@
 #!/bin/bash
 python pastefest/setup.py develop
+populate_pastefest
 python pastefest/runapp.py
