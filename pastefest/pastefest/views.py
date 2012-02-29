@@ -17,7 +17,7 @@ from pyramid.httpexceptions import (
 
 @view_config(route_name='index', renderer='create.mako')
 def create(request):
-    pastes = DBSession.query(Paste.id).order_by(Paste.id.desc()).first()
+    pastes = DBSession.query(Paste.id).order_by(Paste.id.desc()).limit(10)
     return dict(pastes=pastes)
 
 @view_config(route_name='index', request_method='POST')

@@ -1,4 +1,3 @@
 #!/bin/bash
 python pastefest/setup.py develop
-populate_pastefest production.ini
 python pastefest/runapp.py
