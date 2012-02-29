@@ -24,13 +24,10 @@ class Paste(Base):
     def __init__(self, raw):
         self.raw = raw
 
-    def html(self, linenos='inline'):
+    def html(self, linenos=True):
         from pygments import highlight
         from pygments.lexers import get_lexer_by_name, guess_lexer
         from pygments.formatters import HtmlFormatter
-
-        if linenos != 'inline':
-            linenos = False
 
         lexer = guess_lexer(self.raw)
         formatter = HtmlFormatter(linenos=linenos, cssclass="highlight")
