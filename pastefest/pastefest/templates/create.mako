@@ -32,7 +32,7 @@
     <div class="span12">
         <ul>
 	% for paste in pastes:
-  <li><a href="${request.route_url('view',id=paste.id)}#disqus_thread" data-disqus-identifier="paste_${paste.id}">Paste ${paste.id}</a></li>
+  <li><a href="${request.route_url('view', id=paste.id)}">Paste #${paste.id}</a> (<a href="${request.route_url('view',id=paste.id)}#disqus_thread" data-disqus-identifier="paste_${paste.id}">Paste ${paste.id}</a>)</li>
 	%endfor
 	</ul>
     </div>
