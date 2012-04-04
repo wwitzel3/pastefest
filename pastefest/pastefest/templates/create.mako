@@ -10,12 +10,12 @@
         <div class="control-group">
           <label class="control-label" for="desc">Description</label>
           <div class="controls">
-            <input type="text" class="input-xlarge" id="desc" />
+            <input type="text" class="input-xlarge" name="desc" />
             <p class="help-block">Optional description for your paste.</p>
           </div>
         </div>
 
-        <textarea name="code"></textarea>
+        <textarea name="raw"></textarea>
 
         <div class="form-actions">
           <input type="submit" name="add" value="Paste" class="btn-primary" />

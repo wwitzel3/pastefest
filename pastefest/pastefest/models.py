@@ -20,13 +20,16 @@ class Paste(Base):
     __tablename__ = 'pastes'
     id = Column(Integer, primary_key=True)
     raw = Column(Text)
+    desc = Column(Text)
 
-    def __init__(self, raw):
+    def __init__(self, raw, desc, private=False):
         self.raw = raw
+        self.desc = desc
+        self.private = private
 
     def html(self, linenos=True):
         from pygments import highlight
-        from pygments.lexers import get_lexer_by_name, guess_lexer
+        from pygments.lexers import guess_lexer
         from pygments.formatters import HtmlFormatter
 
         lexer = guess_lexer(self.raw)

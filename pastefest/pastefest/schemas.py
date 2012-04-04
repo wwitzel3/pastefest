@@ -7,8 +7,8 @@ from colander import (
     )
 
 class Paste(MappingSchema):
-    description = SchemaNode(String())
-    private = SchemaNode(Boolean())
+    desc = SchemaNode(String(), missing=None)
+    private = SchemaNode(Boolean(), missing=False)
     raw = SchemaNode(String())
 
 def validate(schema):

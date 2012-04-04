@@ -23,10 +23,10 @@ def create(request):
     return dict(pastes=pastes)
 
 @view_config(route_name='index', request_method='POST')
-@S.validate(S.Paste)
 def create_paste(request):
+    clean_paste = S.Paste().deserialize(request.params)
     session = DBSession()
-    paste = Paste(raw=request.params.get('code'))
+    paste = Paste(**clean_paste)
     session.add(paste)
     session.flush()
 
