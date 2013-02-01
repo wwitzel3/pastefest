@@ -27,13 +27,11 @@ def main(argv=sys.argv):
     config_uri = argv[1]
     setup_logging(config_uri)
     settings = get_appsettings(config_uri)
-    settings['sqlalchemy.url'] = os.environ['HEROKU_SHARED_POSTGRESQL_IVORY_URL']
-
     engine = engine_from_config(settings, 'sqlalchemy.')
     DBSession.configure(bind=engine)
     Base.metadata.create_all(engine)
     paste = Paste(raw='''def foo():
     print "Hello, world!"
-    ''')
+    ''', desc='First paste!')
     DBSession.add(paste)
     transaction.commit()

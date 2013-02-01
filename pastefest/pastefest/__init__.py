@@ -8,10 +8,6 @@ from .models import DBSession
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
-    settings['sqlalchemy.url'] = os.environ['HEROKU_SHARED_POSTGRESQL_IVORY_URL']
-    settings['sqlalchemy.pool_size'] = 20
-    settings['sqlalchemy.max_overflow'] = 0
-
     engine = engine_from_config(settings, 'sqlalchemy.')
     DBSession.configure(bind=engine)
 
