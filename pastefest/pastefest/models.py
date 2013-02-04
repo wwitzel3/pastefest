@@ -33,6 +33,8 @@ class Paste(Base):
         from pygments.formatters import HtmlFormatter
 
         lexer = guess_lexer(self.raw)
-        formatter = HtmlFormatter(linenos='table', cssclass="highlight")
+        formatter = HtmlFormatter(linespans='line-number', lineanchors="l",
+                                  anchorlinenos=True, linenos='table',
+                                  cssclass="highlight")
         return highlight(self.raw, lexer, formatter)
 
